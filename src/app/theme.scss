@@ -1,0 +1,33 @@
+$text: #002D4D;
+
+$primary: #0075FF;
+$primary1: #0075FF;
+$primary2: #0075FF;
+
+$red: #d55e00;
+$green: #009e73;
+
+$bg: #121212;
+
+$g1: #F3F3F3;
+$g2: #F4F4F4;
+$g3: #CBCBCB;
+$g4: #1c1c1c;
+$g5: #BDBDBD;
+
+a.button {
+  background: $primary2;
+  color: white;
+  width: calc(100% - 30px);
+  height: 40px;
+  margin: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    color: white;
+    padding-left: 5px;
+  }
+}

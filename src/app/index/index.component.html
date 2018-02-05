@@ -1,0 +1,44 @@
+<div class="columns">
+  <div class="column small">
+    <div class="context-bar">
+      <input type="text" placeholder="Filename.sol" class="search" [(ngModel)]="filename"/>
+      <a class="add-button" (click)="addPage()">
+        <i class="fa fa-plus"></i>
+      </a>
+    </div>
+    <div class="file-nav">
+      <a class="file easing" *ngFor="let c of codePages;" (click)="code = c.code; setActive(); c.active = true;" [ngClass]="{'active': c.active}"><i class="fa fa-file"></i> {{c['name']}}</a>
+    </div>
+  </div>
+  <div class="column big">
+    <codemirror [(ngModel)]="code" [config]="config" (change)="change()"></codemirror>
+  </div>
+  <div class="column small">
+    <p class="label">My Keychain</p>
+    <div class="tabs">
+      <a class="tab easing" *ngFor="let account of accounts; let i = index;" [ngClass]="{'active': index == (i + 1)}" (click)="index = (i + 1); getBalance()">#{{i + 1}}</a>
+    </div>
+    <ngx-qrcode
+    [qrc-element-type]="elementType"
+    [qrc-value] = "'poop'"
+    qrc-class = "qrcode"
+    qrc-errorCorrectionLevel = "L">
+    </ngx-qrcode>
+    <p class="qrlabel">{{accounts[index - 1]}}</p>
+    <h1>{{balance}} ETH <i class="cc ETH"></i></h1>
+    <a class="button primary easing">
+      Make new wallet
+    </a>
+    <a class="button primary easing">
+      Top ETH <i class="cc ETH"></i>
+    </a>
+    <p class="label">Deploy which file?</p>
+    <select class="contract-select" [(ngModel)]="contractIndex">
+      <option>Choose a contract</option>
+      <option *ngFor="let c of codePages; let i = index;" value="{{i}}">{{c['name']}}</option>
+    </select>
+    <a class="button primary easing" (click)="deployContract()">
+      Deploy Smart Contract
+    </a>
+  </div>
+</div>
