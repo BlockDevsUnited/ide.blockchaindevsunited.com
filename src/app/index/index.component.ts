@@ -125,7 +125,7 @@ contract PoopEmoji {
           {
             data: '0x' + bytecode,
             from: this.accounts[this.index - 1],
-            gas: 4200000000,
+            gas: 4200000,
             gasLimit: 10000000000
           },
           (err, res) => {
