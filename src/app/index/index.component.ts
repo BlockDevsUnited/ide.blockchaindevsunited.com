@@ -142,4 +142,8 @@ contract PoopEmoji {
     });
   }
 
+  formatBalance(value) {
+    return parseFloat(value).toFixed(5);
+  }
+
 }

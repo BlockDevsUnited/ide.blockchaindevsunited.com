@@ -13,6 +13,8 @@ header {
   h1 {
     font-size: 14px;
     padding: 0 15px;
+    width: 300px;
+    margin: 0;
   }
 
   div.section-wrap {
@@ -30,14 +32,16 @@ header {
     }
     a.link {
       border-left: 2px solid $g4;
-      width: 100px;
+      width: 150px;
       height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
       i {
-        margin-left: 5px;
         margin-top: 2.5px;
+      }
+      span {
+        padding: 0 0 0 15px;
       }
     }
   }

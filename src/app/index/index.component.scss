@@ -7,13 +7,11 @@ div.columns {
   height: calc(100vh - 70px);
   div.column {
     width: 300px;
-    border-right: 2px solid black;
     &.big {
       background: black;
       width: calc(100% - 600px);
     }
     &:nth-child(3) {
-      border-left: 2px solid $g4;
       background: black;
       height: 100vh;
       position: relative;

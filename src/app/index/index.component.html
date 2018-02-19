@@ -25,13 +25,15 @@
     qrc-errorCorrectionLevel = "L">
     </ngx-qrcode>
     <p class="qrlabel">{{accounts[index - 1]}}</p>
-    <h1>{{balance}} ETH <i class="cc ETH"></i></h1>
+    <h1>{{formatBalance(balance)}} ETH <i class="cc ETH"></i></h1>
+    <!--
     <a class="button primary easing">
       Make new wallet
     </a>
     <a class="button primary easing">
       Top ETH <i class="cc ETH"></i>
     </a>
+  -->
     <p class="label">Deploy which file?</p>
     <select class="contract-select" [(ngModel)]="contractIndex">
       <option>Choose a contract</option>
